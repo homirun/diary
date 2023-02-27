@@ -1,2 +1,2 @@
 # diary
-diary.homi.run
+https://diary.homi.run
