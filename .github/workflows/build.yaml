@@ -36,13 +36,12 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            name/app
+            ghcr.io/homirun/diary
           tags: |
-            type=raw,pattern={{date 'YYYYMMDD-hhmmss'}}-{{sha}}
+            type=schedule,pattern={{date 'YYYYMMDD-hhmmss'}}
       - name: Build and Push
         uses: docker/build-push-action@v4
         with:
           context: ./
           push: true
-          tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
+          tags: ${{ steps.meta.outputs.tags }}
