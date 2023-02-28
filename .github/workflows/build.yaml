@@ -31,6 +31,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: setup metadata 
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            name/app
+          tags: |
+            type=raw,pattern={{date 'YYYYMMDD-hhmmss'}}-{{sha}}
       - name: Build and Push
         uses: docker/build-push-action@v4
         with:
