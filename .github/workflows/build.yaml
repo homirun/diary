@@ -35,10 +35,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: |
-            ghcr.io/homirun/diary
-          tags: |
-            type=schedule,pattern={{date 'YYYYMMDD-hhmmss'}}
+          images: ghcr.io/homirun/diary
+          tags: type=sha,format=long
       - name: Build and Push
         uses: docker/build-push-action@v4
         with:
