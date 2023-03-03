@@ -1,5 +1,5 @@
 ---
-title: "2023-03-03 椅子・ガンエボ・ThinkCentre"
+title: "2023-03-02 椅子・ガンエボ・ThinkCentre"
 date: 2023-03-03T01:03:58+09:00
 draft: false
 ---
