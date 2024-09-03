@@ -1,7 +1,7 @@
 ---
 title: "2024-09-04 帰ってきた"
 date: 2024-09-04T02:15:02+09:00
-draft: true
+draft: false
 ---
 
 
